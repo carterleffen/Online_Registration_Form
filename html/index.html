@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,800' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Code Review</title>
+  <link rel="stylesheet" media="screen" href="../css/styles.css">
+
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Header Begin -->
+    <div class="header">
+      <h1>THE CODE REVIEW</h1>
+    </div>
+    <div class="signup">
+      <h1>Signup for the newsletter</h1>
+      <p>Get the latest news on how your code is doing right in your inbox</p>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Contact Info Begin -->
+    <div class="contact_info">
+      <form class="contact_form">
+        <fieldset>
+          <legend>
+            Contact Information
+          </legend>
+          <div class="contact">
+            <p class="text_input">
+              <label for="name">Full Name</label>
+              <input type="text" name="name" id="name" placeholder="John Doe (Required)" required pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+" title="firstname lastname">
+
+            </p>
+
+            <p class="text_input">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email"  placeholder="email@mail.com (Required)" required>
+            </p>
+
+            <p class="text_input">
+              <label for="phone">Phone</label>
+              <input type="tel" name="phone" id="phone" placeholder="1-202-555-5555">
+            </p>
+
+            <p class="text_input">
+              <label for="street_address">Street Address</label>
+              <input type="text" name="street_address" id="street_address" placeholder="1600 Pennsylvania Avenue">
+            </p>
+
+            <p class="text_input">
+              <label for="city">City</label>
+              <input type="text" name="city" id="city" placeholder="Washington, D.C.">
+            </p>
+
+            <p class="text_input">
+              <label for="state">State</label>
+              <select name="state" id="state">
+                <option value="" disabled selected>Choose State</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+              </select>
+            </p>
+
+
+            <p class="text_input zip">
+              <label for="zip">Zip Code</label>
+              <input type="number" name="zip" id="zip" placeholder="20001">
+            </p>
+          </div>
+        </fieldset>
+
+
+        <fieldset>
+          <legend>
+            Newsletter
+          </legend>
+          <div class="newsletter">
+
+            <p class="heading">Select the newsletters you would like to receive</p>
+
+            <p class="select_input">
+              <input type="checkbox" name="receive" id="htmlnews">
+              <label for="htmlnews">HTML News</label>
+            </p>
+
+            <p class="select_input">
+              <input type="checkbox" name="recieve" id="cssnews">
+              <label for="cssnews">CSS News</label>
+            </p>
+
+            <p class="select_input">
+              <input type="checkbox" name="receive" id="javascriptnews">
+              <label for="javascriptnews">Javascript News</label>
+            </p>
+
+            <p class="heading">Newsletter format</p>
+
+            <p class="select_input">
+              <input type="radio" name="format" id="html">
+              <label for="html">HTML</label>
+            </p>
+
+            <p class="select_input">
+              <input type="radio" name="format" id="plain">
+              <label for="plain">Plain Text</label>
+            </p>
+
+            <p class="text_input other">
+              <label for="other">Other topics you'd like to hear about</label>
+            </p>
+            <div class="commentbox">
+              <p>
+                <textarea name="other" id="other" cols="25" rows="10"></textarea>
+              </p>
+            </div>
+            <div class="btn">
+              <button type="submit" id="btn">Submit</button>
+            </div>
+            <!-- Newsletter Begin -->
+
+            <!-- Newsletter End -->
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="footer">
+      <p>Copyright The Code Review</p>
+    </div>
+  </div>
+
+</body>
+
+</html>
