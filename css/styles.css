@@ -1,352 +1,287 @@
-/* ------------------------------------------*/
-/* ------------ General Styling -------------*/
-/* ------------------------------------------*/
+    /* ------------------------------------------*/
+    /* ------------ General Styling -------------*/
+    /* ------------------------------------------*/
 
-*:focus {
-  outline: 3px solid rgb(77, 136, 214);
-}
+    *:focus {
+      outline: 3px solid rgb(77, 136, 214);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    fieldset {
+      border: 0;
+    }
+    /* webkit solution */
 
-* {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+    input, .zip input {
+      padding-left: 10px;
+    }
+    /* mozilla solution */
 
-fieldset {
-  border: 0;
-}
-.help {
-  display: none;
-  font-size: 90%;
-}
-input:focus + .help {
-  display: inline-block;
-}
-
-/* webkit solution */
-
-::-webkit-input-placeholder, select {
-  text-align: left;
-  font-size: 1em;
-  font-family: 'Merriweather Sans', sans-serif;
-  font-weight: 300;
-  color: #rgb(148, 152, 153);
-}
-input, .zip input {
-  padding-left: 10px;
-}
-
-/* mozilla solution */
-
-input:-moz-placeholder, select, input {
-  text-align: left;
-  font-size: 1em;
-  font-family: 'Merriweather Sans', sans-serif;
-  font-weight: 400;
-  color: #rgb(148, 152, 153);
-}
-input:invalid, input:out-of-range {
-  border-color: hsl(0, 50%, 50%);
-  background: hsl(0, 50%, 90%);
-}
-input:focus + .help, input:invalid + .help {
-  display: inline-block;
-}
-
-/* -----Contact Form Validation -------*/
-
-.contact_form input:required:valid, .contact_form textarea:required:valid {
-  /* when a field is considered valid by the browser */
-  background: rgb(82, 247, 183);
-  box-shadow: 0 0 5px #5cd053;
-  border-color: #28921f;
-}
-.contact input:active, .contact select:active {
-  -moz-transition: padding .25s;
-  -webkit-transition: padding .25s;
-  -o-transition: padding .25s;
-  transition: padding .25s;
-  7
-}
-.container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-body {
-  background: #ECF0F1;
-}
-h1, legend, p, .contact label, input, textarea {
-  font-family: 'Merriweather Sans', sans-serif;
-}
-
-textarea {
-  font-size: 1em;
-  padding: 10px;
-}
-
-h1, .signup, .signup p, legend {
-  color: #fff;
-}
-.signup, .signup p {
-  text-align: center;
-}
-.btn {
-  display: flex;
-  justify-content: center;
-}
-#btn {
-  padding: 10px 90px;
-  background: rgb(54, 163, 107);
-  border: 0 none;
-  cursor: pointer;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  font-family: 'Merriweather Sans', sans-serif;
-  font-size: 1.5em;
-  color: #fff;
-}
-#btn:hover {
-  background: rgb(68, 205, 135);
-}
-
-/* ------------------------------------------*/
-/* -------- End General Styling -------------*/
-/* ------------------------------------------*/
-
-
-
-/* ------------------------------------------*/
-/* -------- Mobile 320px Size Styling -------*/
-/* ------------------------------------------*/
-
-.contact {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-legend {
-  font-size: 1.2em;
-  font-weight: 700;
-  margin-left: 20px;
-  padding-top: 20px;
-}
-.header {
-  background: #2C3E50;
-  width: 100%;
-  text-align: center;
-  margin: 0 10px;
-  font-size: 0.9em;
-}
-.signup {
-  background: #2980B9;
-  width: 100%;
-  text-align: center;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  font-size: 0.9em;
-}
-
-/* Contact Information */
-
-
-/* Signup Information */
-
-.signup p, .signup h1 {
-  margin: 20px 5px;
-}
-
-/* Legend Styling */
-
-legend {
-  background: #3498DB;
-  width: 300px;
-  height: 60px;
-  font-size: 1em;
-  margin: 0 auto;
-  padding-left: 15px;
-}
-
-/* Labels */
-
-.heading, .text_input .heading {
-  font-weight: bold;
-  padding-right: 15px;
-}
-
-/*Input Fields */
-
-.contact input, .contact select {
-  width: 280px;
-  height: 40px;
-  font-size: 1.2em;
-}
-
-select {
-  width: 300px;
-  height: 30px;
-  overflow: hidden;
-  background: #fff;
-}
-
-.contact, .newsletter, .newsletter p {
-  width: 300px;
-  padding-left: 10px;
-  margin: 0 auto;
-}
-.heading {
-  padding-top: 20px;
-}
-.contact input, .contact select {
-  display: block;
-}
-
-.newsletter .other{
-  margin: 0px;
-  padding-top: 20px;
-  font-weight: bold;
-}
-
-textarea {
-  width: 270px;
-}
-
-
-/* ------------------------------------------*/
-/* -------- Desktop 768px Size Styling ------*/
-/* ------------------------------------------*/
-
-@media all and (min-width: 768px) {
-  .contact {
-    display: flex;
-    flex-direction: column;
-    /*justify-content: center;*/
-    /*align-items: center;*/
-  }
-
-  .newsletter {
-    width: 600px;
-  }
-
-  .select_input {
-    display: inline-block;
-  }
-
-  legend {
-    background: #3498DB;
-    width: 600px;
-    height: 60px;
-    font-size: 1em;
-    padding-left: 15px;
-
-  }
-
-  .contact label {
-      float: left;
-      width: 120px;
+    :placeholder,
+    :-webkit-input-placeholder,
+    ::-moz-placeholder,
+    :-ms-input-placeholder {
       text-align: left;
-      margin-left: 1em;
-  }
+      font-size: 1em;
+      font-family: 'Merriweather Sans', sans-serif;
+      font-weight: 400;
+      color: rgb(148, 152, 153);
+    }
+    :invalid {
+      border-color: hsl(0, 50%, 50%);
+      /*background: hsl(0, 50%, 90%);*/
+    }
+    /* -----Contact Form Validation -------*/
 
-  legend {
-    font-size: 1.2em;
-    font-weight: 700;
-    /*margin-left: 20px;*/
-  }
+    .contact_form input:required:valid {
+      /* when a field is considered valid by the browser */
+      background: rgb(82, 247, 183);
+      box-shadow: 0 0 5px #5cd053;
+      border-color: #28921f;
+    }
+    /*.contact input:active, .contact select:active {*/
 
-  .newsletter label {
-    float: left;
-    text-align: left;
-  }
+    :active {
+      transition: padding .25s;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    body {
+      background: #ECF0F1;
+    }
+    h1, legend, p, .contact label, input, textarea {
+      font-family: 'Merriweather Sans', sans-serif;
+    }
+    textarea {
+      font-size: 1em;
+      padding: 10px;
+    }
+    h1, .signup, .signup p, legend {
+      color: #fff;
+    }
+    .signup, .signup p {
+      text-align: center;
+    }
+    .btn {
+      display: flex;
+      justify-content: center;
+    }
+    #btn {
+      padding: 10px 90px;
+      background: rgb(54, 163, 107);
+      border: 0 none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-family: 'Merriweather Sans', sans-serif;
+      font-size: 1.5em;
+      color: #fff;
+    }
+    #btn:hover {
+      background: rgb(68, 205, 135);
+    }
+    /* ------------------------------------------*/
+    /* -------- End General Styling -------------*/
+    /* ------------------------------------------*/
+    /* ------------------------------------------*/
+    /* -------- Mobile 320px Size Styling -------*/
+    /* ------------------------------------------*/
 
-  .newsletter, .newsletter p {
-    padding-left: 0;
-  }
-  .newsletter input {
-    float: left;
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    legend {
+      font-size: 1.2em;
+      font-weight: 700;
+      margin-left: 20px;
+      padding-top: 20px;
+    }
+    .header {
+      background: #2C3E50;
+      width: 100%;
+      text-align: center;
+      margin: 0 10px;
+      font-size: 0.9em;
+    }
+    .signup {
+      background: #2980B9;
+      width: 100%;
+      text-align: center;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      font-size: 0.9em;
+    }
+    /* Contact Information */
+    /* Signup Information */
 
-  }
-  .text_input {
-    width: 600px;
-    /*margin-left: 20px;*/
-    display: flex;
-    flex-direction: row;
-    /*align-content: flex-start;*/
-  }
+    .signup p, .signup h1 {
+      margin: 20px 5px;
+    }
+    /* Legend Styling */
 
-  .text_input label {
-    margin-top: 10px;
-    margin-right: 20px;
-  }
+    legend {
+      background: #3498DB;
+      width: 300px;
+      height: 60px;
+      font-size: 1em;
+      margin: 0 auto;
+      padding-left: 15px;
+    }
+    /* Labels */
 
-  /* Legend Styling */
+    .heading, .text_input .heading {
+      font-weight: bold;
+      padding-right: 15px;
+    }
+    /*Input Fields */
 
-  .contact_info {
-    width: 600px;
-  }
-  .legendDiv {
-    background: #3498DB;
-    width: 600px;
-    height: 60px;
-    font-size: 1em;
-    margin: 0 auto;
-  }
+    .contact input, .contact select {
+      width: 280px;
+      height: 40px;
+      font-size: 1.2em;
+    }
+    select {
+      width: 300px;
+      height: 30px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .contact, .newsletter, .newsletter p {
+      width: 300px;
+      padding-left: 10px;
+      margin: 0 auto;
+    }
+    .heading {
+      padding-top: 20px;
+    }
+    .contact input, .contact select {
+      display: block;
+    }
+    .newsletter .other {
+      margin: 0px;
+      padding-top: 20px;
+      font-weight: bold;
+    }
+    textarea {
+      width: 270px;
+    }
+    /* ------------------------------------------*/
+    /* -------- Desktop 768px Size Styling ------*/
+    /* ------------------------------------------*/
 
-
-  /* Labels */
-  .heading, .text_input .heading {
-    font-weight: bold;
-  }
-
-
-  /*Input Fields */
-  .contact input, .contact select {
-    width: 350px;
-    height: 40px;
-    font-size: 1.2em;
-  }
-
-  select {
-    width: 500px;
-    height: 30px;
-    overflow: hidden;
-    background: #fff;
-  }
-
-  .contact input, .contact select {
-    display: inline-block;
-  }
-  .contact, .newsletter, .newsletter p {
-    width: 550px;
-    margin: 0 auto;
-  }
-
-  .zip input {
-    width: 5em;
-    padding-left: 10px;
-}
-
-  .newsletter .other label {
-    margin-left: 0px;
-    font-weight: bold;
-  }
-
-  .newsletter .other{
-    margin: 0px;
-    padding-top: 0px;
-    font-weight: bold;
-  }
-
-  textarea {
-    width: 100%;
-  }
-
-  #btn {
-    justify-content: center;
-  margin-top: 5px;
-  margin-left: 0px;
-    padding: 10px 230px;
-  }
-}
+    @media all and (min-width: 768px) {
+      .contact {
+        display: flex;
+        flex-direction: column;
+        /*justify-content: center;*/
+        /*align-items: center;*/
+      }
+      .newsletter {
+        width: 600px;
+      }
+      .select_input {
+        display: inline-block;
+      }
+      legend {
+        background: #3498DB;
+        width: 600px;
+        height: 60px;
+        font-size: 1em;
+        padding-left: 15px;
+      }
+      .contact label {
+        float: left;
+        width: 120px;
+        text-align: left;
+        margin-left: 1em;
+      }
+      legend {
+        font-size: 1.2em;
+        font-weight: 700;
+        /*margin-left: 20px;*/
+      }
+      .newsletter label {
+        float: left;
+        text-align: left;
+      }
+      .newsletter, .newsletter p {
+        padding-left: 0;
+      }
+      .newsletter input {
+        float: left;
+      }
+      .text_input {
+        width: 600px;
+        /*margin-left: 20px;*/
+        display: flex;
+        flex-direction: row;
+        /*align-content: flex-start;*/
+      }
+      .text_input label {
+        margin-top: 10px;
+        margin-right: 20px;
+      }
+      /* Legend Styling */
+      .contact_info {
+        width: 600px;
+      }
+      .legendDiv {
+        background: #3498DB;
+        width: 600px;
+        height: 60px;
+        font-size: 1em;
+        margin: 0 auto;
+      }
+      /* Labels */
+      .heading, .text_input .heading {
+        font-weight: bold;
+      }
+      /*Input Fields */
+      .contact input, .contact select {
+        width: 350px;
+        height: 40px;
+        font-size: 1.2em;
+      }
+      select {
+        width: 500px;
+        height: 30px;
+        overflow: hidden;
+        background: #fff;
+      }
+      .contact input, .contact select {
+        display: inline-block;
+      }
+      .contact, .newsletter, .newsletter p {
+        width: 550px;
+        margin: 0 auto;
+      }
+      .zip input {
+        width: 5em;
+        padding-left: 10px;
+      }
+      .newsletter .other label {
+        margin-left: 0px;
+        font-weight: bold;
+      }
+      .newsletter .other {
+        margin: 0px;
+        padding-top: 0px;
+        font-weight: bold;
+      }
+      textarea {
+        width: 100%;
+      }
+      #btn {
+        justify-content: center;
+        margin-top: 5px;
+        margin-left: 0px;
+        padding: 10px 230px;
+      }
+    }
